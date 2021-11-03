@@ -391,7 +391,12 @@ const consultarExtrato = (req, res) => {
     }
   }
 
-  res.status(200).json({ seusDepositos, seusSaques, transferenciasEnviadas, transferenciasRecebidas });
+  res.status(200).json({
+    depositos: seusDepositos,
+    saques: seusSaques,
+    transferenciasEnviadas,
+    transferenciasRecebidas
+  });
 }
 
 module.exports = {
